@@ -1,0 +1,88 @@
+dn: DOMAIN_OU
+ou: people
+description: All developers in ESSE
+objectclass: organizationalunit
+
+dn: cn=bryan,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: bryan
+displayName: Bryan Huang
+sn: bryan
+uid: bryan
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: bryan@DOMAIN_NAME
+description: Bryan Huang
+ou: people
+
+dn: cn=david,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: david
+displayName: David Geng
+sn: david
+uid: david
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: david@DOMAIN_NAME
+description: David Geng
+ou: people
+
+dn: cn=jeff,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: jeff
+displayName: Jeff Yang
+sn: jeff
+uid: jeff
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: jeff@DOMAIN_NAME
+description: Jeff Yang
+ou: people
+
+dn: cn=frank,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: frank
+displayName: Frank Han
+sn: Frank
+uid: frank
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: frank@DOMAIN_NAME
+description: Frank Han
+ou: people
+
+dn: cn=alex,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: alex
+displayName: Alex Yan
+sn: alex
+uid: alex
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: alex@DOMAIN_NAME
+description: Alex Yan
+ou: people
+
+dn: cn=gary,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: gary
+displayName: Gary Shen
+sn: gary
+uid: gary
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: gary@DOMAIN_NAME
+description: Gary Shen
+ou: people
+
+dn: cn=jenkins,DOMAIN_OU
+objectclass: inetOrgPerson
+cn: jenkins 
+displayName: Jenkins
+sn: jenkins
+uid: jenkins
+userpassword: LDAP_PASS
+homephone: 555-111-2222
+mail: jenkins@DOMAIN_NAME
+description: Jenkins
+ou: people
