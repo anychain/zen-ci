@@ -1,3 +1,11 @@
+install docker on ubuntu
+========================
+
+sudo apt-get purge docker.io    
+curl -s https://get.docker.io/ubuntu/ | sudo sh     
+sudo apt-get update     
+sudo apt-get install lxc-docker     
+
 ldap setup
 ==========
 docker command::
@@ -120,6 +128,32 @@ zuul configuration
    
    telnet 172.16.100.2 4730, then run command 'workers' and 'status' to check gear man status
 
+setup gitlab
+============
+
+0)　link for docker gitlab
+
+   https://github.com/sameersbn/docker-gitlab
+
+1) install postgresql::
+   
+   docker run --name=gitlabpg -d --env='DB_NAME=gitlab' --env='DB_USER=gitlab' \
+   --env='DB_PASS=3ss3.10' --volume=/home/hanzf/postgresql:/var/lib/postgresql postgres:9.4.4
+
+2) install redis::
+
+   docker run --name=gitlabredis -d \
+   --volume=/home/hanzf/redis:/var/lib/redis \
+   sameersbn/redis:latest
+
+3) install gitlab::
+
+   docker run --name='gitlab' -d \
+     --link=gitlabpg:postgresql --link=gitlabredis:redisio \
+     --publish=10005:22 --publish=10004:80 \
+     --env='GITLAB_PORT=10004' --env='GITLAB_SSH_PORT=10005' \
+     --volume=/home/hanzf/gitlab:/home/git/data \
+   sameersbn/gitlab:7.12.1
 
 how to manually change gerrit db
 ================================
